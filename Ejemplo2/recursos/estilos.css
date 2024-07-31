@@ -1,0 +1,195 @@
+/* la siguiente regla se aplica a todos los elementos h1 que contenga el documento 
+   sin importar donde esten */
+h1 {
+    color: darkblue;
+    font-size: 40px;
+    font-family: Pacifico, Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: rgba(100, 100, 100, 0.9) 10px 10px 10px;
+}
+
+/* la siguiente regla se aplica a todos los elementos p que se encuentren contenidos
+   en un main unicamente */
+main p {
+    font-size: 30px;
+    color: blueviolet;
+}
+
+/* la siguiente regla se aplica a todos los elementos section que se encuentren
+   inmediatamente despues de un main unicamente */
+main > section {
+    font-weight: bold;
+    background: -webkit-linear-gradient(top, rgb(0,0,0), rgb(2, 107, 19));
+}
+
+/* la siguiente regla se aplica a todos los elementos p que se encuentren enseguida
+   de un elemento h1, siempre y cuando tengan el mismo "padre" */
+h1 + p {
+    font-style: italic;
+}
+
+/* la siguiente regla se aplica a todos los elementos p que se encuentren despues 
+   de otro elemento p */
+p ~ p {
+    font-size: 25px;
+    text-decoration: overline;
+}
+
+/* la siguiente regla se aplica al elemento con id textoEsp */
+#textoEsp {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* la siguiente regla se aplica a todos los elementos que pertenezcan a la clase
+   segundoParrafo */
+.segundoParrafo {
+    font-variant: small-caps;
+}
+
+/* la siguiente regla se aplica a todos los elementos que pertenezcan a la clase
+   encabezado */
+.encabezado {
+    background-image: url(../imagenes/pared-de-ladrillo.png);
+    background-size: contain;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    padding-left: 15px;
+}
+
+/* la siguiente regla se aplica a todos los elementos que pertenezcan a la clase
+   encabezado pero que sean exclusivamente elementos p */
+p.encabezado {
+    font-size: 18px;
+    font-weight: 900;
+    width: 250px;
+    height: 60px;
+    overflow: scroll;
+    text-align: center;
+    box-shadow: rgba(150, 150, 150, 0.5) 5px 5px 10px 10px;
+}
+
+/* la siguiente regla se aplica a todos los elementos que contengan el atributo
+   name */
+p[name] {
+    background-color: cadetblue;
+}
+
+/* la siguiente regla se aplica a todos los elementos que contengan el atributo
+   name y tenga el nombre textoFinal específicamente */
+p[name="textoFinal"] {
+    text-decoration: line-through;
+    word-spacing: 20px;
+}
+/* 
+   para el selector que usa el atributo (en nuestro ejemplo name pero puede ser
+   cualquier atributo) se pueden usar otros caracteres para seleccionar valores
+   mas especificos, por ejemplo:
+   name~="texto" seleccionaria todos los elementos cuyo valor incluyan la palabra texto
+   name^="texto" seleccionaria todos los elementos cuyo valor comienza con texto
+   name$="texto" seleccionaria todos los elementos cuyo valor termina con texto
+   name*="texto" seleccionaria todos los elementos cuyo valor contenga la subcadena texto
+*/
+
+/* la siguiente regla se aplica a los elementos p que sean el tercer hijo de un elemento 
+   en nuestro ejemplo los tercer elementos de cada section*/
+p:nth-child(3) {
+    text-transform: lowercase;
+    letter-spacing: 10px;
+}
+/*
+   las subclases comunes son:
+   nth-child(v) selecciona un elemento de una lista de elementos hermanos que se encuentren
+                en la posicion indicada por v
+   first-child  selecciona al primer elemento de una lista de elementos hermanos
+   last-child   selecciona al ultimo elemento de una lista de elementos hermanos
+   only-child   sulecciona un elemento cuando es hijo unico de otro elemento
+*/
+
+/* la siguiente regla se aplica a todos los elemntos de la clase piePagina que sean hijos
+   impares */
+.piePagina:nth-child(odd){
+    background-color: greenyellow;
+}
+
+/* la siguiente regla se aplica a todos los elemntos de la clase piePagina que sean hijos
+   pares */
+.piePagina:nth-child(even) {
+    background-color: lightcoral;
+}
+
+/* la siguiente regla se aplica a todos los elementos que no sean p */
+:not(p) {
+    margin: 10px;
+}
+
+/* la siguiente regla nos permite cargar una fuente propia para la pagina */
+@font-face {
+    font-family: "Pacifico";
+    src: url(Pacifico/Pacifico-Regular.ttf);
+}
+
+/* la siguiente regla se aplica al header, para establecer el margen, padding y borde */
+header {
+    margin: 30px;
+    padding: 15px;
+    border: 30px solid transparent;
+    border-image-source: url(../imagenes/flor-de-cerezo.png);
+    border-image-slice: 25%;
+    border-image-repeat: round;
+}
+
+/* la siguiente regla se aplica al footer, para establecer el padding, borde y outline */
+footer {
+    border-style: double;
+    border-width: 5px 5px 5px 5px;
+    border-radius: 20px 20px 70px 70px;
+    padding: 10px;
+    outline-style: dashed;
+    outline-width: 4px;
+    outline-offset: 5px;
+    outline-color: cornflowerblue;
+}
+
+/* la siguiente regla especifíca que los elementos img se van a adaptar a su contenedor */
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* la siguiente regla establece el tamaño y padding para figure.imagen ademas de unos filtros */
+#imagen {
+    width: 300px;
+    padding: 5px;
+    filter: sepia(0) drop-shadow(10px 10px 12px rgb(0, 144, 180));
+    transition: transform 1s ease-in-out 1s, filter 1s ease-in-out 1s;
+}
+
+/* establece lo que ocurrira cuando la pseudoclase hover se active */
+#imagen:hover {
+    filter: sepia(0.9) drop-shadow(10px 10px 12px rgb(180, 0, 171));
+    -webkit-filter: sepia(0.9) drop-shadow(10px 10px 12px rgb(180, 0, 171));
+    transform: rotate(-45deg);
+    /*transform: perspective(500px) rotate3d(1,1,0,45deg);*/
+}
+
+/* la siguiente regla alinea al centro el caption de figure */
+figcaption {
+    text-align: center;
+}
+
+/* la siguiente regla establece el tamaño y padding para figure.imagen ademas de una animacion */
+#luna {
+    width: 200px;
+    padding: 5px;
+    transform: perspective(1000px);
+    animation: rotar 4s infinite linear;
+}
+
+/* Se establecen los frames de la animacion */
+@keyframes rotar {
+    from {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
