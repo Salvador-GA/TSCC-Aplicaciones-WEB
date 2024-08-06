@@ -1,0 +1,38 @@
+/* Se establece la posición relativa para que pueda contener elementos con posición
+   absoluta, lo que sobresalga de la caja se oculta */
+#cajapadre {
+    position: relative;
+    width: 512px;
+    height: 512px;
+    overflow: hidden;
+}
+
+/* Se establece la posición absoluta para este elemento */
+#contenedor {
+    position: absolute;
+    top: 0px;
+    width: 512px;
+    height: 562px;
+    transition: top 0.5s ease-in-out 0s;
+}
+
+/* Se dimensiona la caja superiro (igual a la imagen) */
+#contenedorsuperior {
+    width: 512px;
+    height: 512px;
+}
+
+/* Se dimensiona la caja inferior (la del texto y la que sobresale de la caja padre */
+#contenedorinferior {
+    width: 512px;
+    height: 35px;
+    padding-top: 15px;
+    background-color: rgba(200,200,200,0.8);
+    text-align: center;
+}
+
+/* Se desplaza el contenedor 50px hacia arriba al tener el mouse encima, esto muestra
+   el contenedor inferior */
+#contenedor:hover {
+    top: -50px
+}
