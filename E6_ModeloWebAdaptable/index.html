@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Modelo de cajas flexible</title>
+    <meta charset="utf-8">
+    <meta name="description" content="EEjemplo 6 de TSCC UAM-I">
+    <meta name="keywords" content="HTML, CSS, Diseño, WEB, Adaptable, Ejemplo, UAM-I">
+    <meta name="author" content="Salvador Gonzalez">
+    <!-- El meta viewport es una etiqueta HTML fundamental para controlar cómo los navegadores 
+         en dispositivos móviles renderizan el contenido de la página web. Específicamente, ayuda 
+         a adaptar el diseño de la página para que se vea correctamente en pantallas pequeñas.
+         width=device-width: Establece el ancho del área de visualización (viewport) a la anchura 
+         del dispositivo. En otras palabras, le dice al navegador que el ancho del viewport debe 
+         ser igual al ancho físico de la pantalla del dispositivo.
+         initial-scale=1.0: Establece el nivel de zoom inicial cuando la página es cargada. Un 
+         valor de 1.0 significa que no hay zoom; la página se muestra en su tamaño natural.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/enprogreso.ico" type="image/x-icon">
+    <link rel="stylesheet" href="recursos/styles.css">
+</head>
+
+<body>
+    <header id="cabeceralogo">
+        <div>
+            <h1>Ejemplo de diseño web adaptable</h1>
+        </div>
+    </header>
+    <nav id="menuprincipal">
+        <div>
+            <ul id="listamenu">
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="fotos.html">Fotos</a> &emsp; v
+                    <ul>
+                        <li><a href="familia.html">Familia</a></li>
+                        <li><a href="vacaciones.html">Vacaciones</a></li>
+                    </ul>
+                </li>
+                <li><a href="videos.html">Videos</a> &emsp; v
+                    <ul>
+                        <li><a href="clases.html">Clases</a></li>
+                        <li><a href="musica.html">Musica</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div>
+            <section id="articulosprincipales">
+                <article>
+                    <h1>Título Primer Artículo</h1>
+                    <time datetime="2024-8-6" pubdate>
+                        <div class="numerodia">6</div>
+                        <div class="nombredia">Martes</div>
+                    </time>
+                    <p>Este es el texto de mi primer artículo</p>
+                    <figure class="imgs">
+                        <img src="imagenes/desarrollador.png">
+                    </figure>
+                </article>
+                <article>
+                    <h1>Título Segundo Artículo</h1>
+                    <time datetime="2024-8-7" pubdate>
+                        <div class="numerodia">7</div>
+                        <div class="nombredia">Miércoles</div>
+                    </time>
+                    <p>Este es el texto de mi segundo artículo</p>
+                    <picture class="imgs">
+                        <!-- Cuando la resolución de la pantalla sea menor o igual a 480px 
+                             cambiamos la imagen por otra -->
+                        <source media="(max-width: 480px)" srcset="imagenes/luna-cuarto.png">
+                        <img src="imagenes/luna-llena.png">
+                    </picture>
+                </article>
+            </section>
+            <aside id="infoadicional">
+                <h1>Información Personal</h1>
+                <p>Cita del artículo uno</p>
+                <p>Cita del artículo dos</p>
+            </aside>
+        </div>
+    </main>
+    <footer id="pielogo">
+        <div>
+            <section class="seccionpie">
+                <h1>Sitio Web</h1>
+                <p><a href="index.html">Principal</a></p>
+                <p><a href="fotos.html">Fotos</a></p>
+                <p><a href="videos.html">Videos</a></p>
+            </section>
+            <section class="seccionpie">
+                <h1>Ayuda</h1>
+                <p><a href="contacto.html">Contacto</a></p>
+            </section>
+            <section class="seccionpie">
+                <address>Iztapalapa, CDMX</address>
+                <small>&copy; 2024</small>
+            </section>
+            <div class="recuperar"></div>
+        </div>
+    </footer>
+</body>
+
+</html>

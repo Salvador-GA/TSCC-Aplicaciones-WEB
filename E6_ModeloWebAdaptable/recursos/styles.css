@@ -1,0 +1,386 @@
+/* Las reglas principales son iguales que en el ejemplo 5 */
+
+/* Se reestablecen los margenes y padding de todos los elementos */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Se establece la propiedad flex para el header, y se indica que queremos el contenido
+   justificado en el centro */
+#cabeceralogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96%;
+    height: 150px;
+    padding: 0% 2%;
+    background-color: cadetblue;
+}
+
+/* Se declara al elemento div dentro del header como flexible, para que la cabecera y su 
+   contenido se expandan hasta ocupar el espacio disponible en la ventana, pero cuando la 
+   página se presenta en dispositivos con pantalla ancha, tenemos que asegurarnos de que 
+   no sea demasiado ancho y al usuario le resulte incómodo leer su contenido. Esto se 
+   resuelve con la propiedad max-width. */
+#cabeceralogo > div {
+    flex: 1;
+    max-width: 960px;
+}
+
+/* Se cambia el tipo de letra y el color del elemento h1 de la cabecera */
+#cabeceralogo h1 {
+    font: bold 2.5rem Arial, sans-serif;
+    color: white;
+}
+
+/* Se establece la propiedad flex para el nav, y se indica que queremos el contenido
+   justificado en el centro */
+#menuprincipal {
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    height: 50px;
+    padding: 0% 2%;
+    background-color: #9FC8D9;
+    border-top: 1px solid #094660;
+    border-bottom: 1px solid #094660;
+}
+
+/* Al igual que el header, el menú de nuestro diseño se extiende hasta los límites 
+   de la ventana con un maximo de 960px */
+#menuprincipal > div {
+    flex: 1;
+    max-width: 960px;
+}
+
+/* Se declaran los elementos li como elementos inline-block. De este modo, podemos 
+   posicionarlos en la misma línea y asignarles un tamaño personalizado */
+#menuprincipal li {
+    display: inline-block;
+    height: 35px;
+    padding: 15px 10px 0px 10px;
+    margin-right: 5px;
+}
+
+/* Se incluye una regla con la seudoclase :hover para cambiar el color de fondo del 
+   elemento li cada vez que el ratón se encuentra sobre una opción */
+#menuprincipal li:hover {
+    background-color: #6FACC6;
+}
+
+/* Los elementos a también se modifican con un color y tipo de letra diferente */
+#menuprincipal a {
+    font: bold 1rem Arial, sans-serif;
+    color: #333333;
+    text-decoration: none;
+}
+
+/* Para seguir el mismo patrón de diseño usado para la cabecera y el menú, tenemos 
+   que extender el elemento main hasta los lados de la ventana y centrar su 
+   contenido */
+main {
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    padding: 2%;
+    background-color: aliceblue;
+}
+
+/* Este elemento div tiene que tener las propiedades para ser un elemento flexible 
+   del main, asi como ser un contenedor flexible para los elementos dentro de el, 
+   la regla que afecta al elemento div requiere ambas propiedades: display para 
+   declarar el elemento como un contenedor flexible y flex para declarar el 
+   contenedor mismo como un elemento flexible (de main) */
+main > div {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    max-width: 960px;
+}
+
+/* Se declara la sección de los articulos (columna izquierda) como elemento flex 
+   del div */
+#articulosprincipales {
+    flex: 1;
+    max-width: 65%;
+    margin-right: 2%;
+    padding-top: 30px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+/* Se declara la sección asides (columna izquierda) como elemento flex del div */
+#infoadicional {
+    flex: 1;
+    max-width: 29%;
+    padding: 2%;
+    background-color: #E7F1F5;
+    border-radius: 10px;
+}
+
+/* Se cambia el tipo de letra y el color del elemento h1 del aside */
+#infoadicional h1 {
+    font: bold 2rem Arial, sans-serif;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* Damos la posición relativa al elemento article para que pueda contener elementos
+   con posición absoluta, como el siguiente y establecemos su padding */
+article {
+    position: relative;
+    padding: 0px 40px 20px 40px;
+}
+
+/* Cada elemento article incluye un elemento time que representa la fecha en la que
+   el artículo se ha publicado. Para nuestro diseño, decidimos mostrar esta fecha
+   en una caja del lado izquierdo del artículo, por lo que este elemento debe tener 
+   una posición absoluta. */
+article time {
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -70px;
+    width: 80px;
+    padding: 15px 5px;
+    background-color: #094660;
+    box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7);
+    border-radius: 5px;
+}
+
+/* Se cambia el tipo de letra y el color del elemento div del numero del dia */
+.numerodia {
+    font: bold 3rem Verdana, sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* Se cambia el tipo de letra y el color del elemento div del nombre del dia */
+.nombredia {
+    font: 1rem Verdana, sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* Se cambia el tipo de letra del elemento h1 del article */
+article h1 {
+    margin-bottom: 5px;
+    font: bold 2rem Georgia, sans-serif;
+}
+
+/* Se cambia el tipo de letra del elemento p del article */
+article p {
+    font: 1.5rem Georgia, sans-serif;
+}
+
+/* Se establece un margen para el elemento figure */
+.imgs {
+    margin: 10px 0px;
+}
+
+/* Se establece un padding y borde para el elemento img de figure */
+.imgs img {
+    max-width: 98%;
+    padding: 1%;
+    border: 1px solid;
+}
+
+/* Así como hemos hecho con el resto de los elementos estructurales, convertir al 
+   elemento footer en una caja flexible */
+#pielogo {
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    padding: 2%;
+    background-color: #0F76A0;
+}
+
+/* Siguiendo la misma idea del main, declaramos como elemento flexibl y como 
+   contenedor  flexible al div para declarar como flexibles las tres columnas 
+   creadas en su interior para presentar la información*/
+#pielogo > div {
+    display: flex;
+    flex: 1;
+    max-width: 960px;
+    background-color: #9FC8D9;
+    border-radius: 10px;
+}
+
+/* Se declara la sección del footer como elemento flex del div */
+.seccionpie {
+    flex: 1;
+    width: 27.33;
+    padding: 3%;
+
+}
+
+/* Se cambia el tipo de letra del elemento h1 del article */
+.seccionpie h1 {
+    font: bold 20px Arial, sans-serif;
+}
+
+/* Se establece un margen al elemento p del article */
+.seccionpie p {
+    margin-top: 5px;
+}
+
+/* Se cambia el tipo de letra del elemento a del article */
+.seccionpie a {
+    font: bold 1rem Arial, sans-serif;
+    color: #666666;
+    text-decoration: none;
+}
+
+/* Aunque también podemos diseñar algunas áreas con posicionamiento absoluto o relativo,
+   estos modos se reservan para posicionar contenido no relevante, como hemos hecho con 
+   las fechas de los artículos en nuestro ejemplo o para mostrar contenido oculto después 
+   de recibir una solicitud por parte del usuario. Por ejemplo, podemos crear un menú 
+   desplegable que muestra un submenú para cada opción. El siguiente ejemplo ilustra cómo 
+   agregar un submenú a la opción Fotos de nuestro documento. */
+
+/* Establecemos la posición relativa al elemento li */
+#listamenu > li {
+    position: relative;
+}
+
+/* Establecemos la posición absoluta al elemento ul que sea hijo directo de un li, se 
+   establece display a none, para que este submenu no se muestre (mas adelante se muestra
+   con el hover), en list-style se quitan los adornos de la lista y en z-index se asigna
+   un valor alto para asegurar que, cuando se muestre, este por encima de todos los demas
+   elementos */
+#listamenu li > ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background-color: #9FC8D9;
+    box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7);
+    border-radius: 0px 0px 5px 5px;
+    list-style: none;
+    z-index: 1000;
+}
+
+/* Establecemos los tamaños y padding al elemento li dentro del ul dentro de el otro li */
+#listamenu li > ul > li {
+    width: 120px;
+    height: 35px;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+/* Hacemos visible el elemento ul, cuando el mouse este encima del elemento li padre */
+#listamenu li:hover ul {
+    display: block;
+}
+
+/* A partir de aquí comenzamos el diseño adaptable con las media query */
+
+/* Cuando el tamaño del área de visualización es de 1120 píxeles o inferior, el elemento
+   time que usamos para representar la fecha en la que el artículo se ha publicado se 
+   queda fuera de la ventana. Esto nos indica que nuestro diseño necesita un punto de 
+   interrupción a 1120 píxeles para mover este elemento a una posición diferente o 
+   reorganizar el contenido. En este caso, decidimos mover la fecha de vuelta dentro del 
+   área ocupada por el elemento article */
+@media (max-width: 1120px) {
+    article time {
+        position: static;
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 10px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 0px;
+        border-radius: 0px;
+    }
+    .numerodia {
+        display: inline-block;
+        font: bold 0.8rem Verdana, sans-serif;
+        color: #999999;
+        padding-right: 5px;
+    }
+    .nombredia {
+        display: inline-block;
+        font: bold 0.8rem Verdana, sans-serif;
+        color: #999999;
+    }
+    article h1 {
+        margin-bottom: 0px;
+    }
+}
+
+/* Cuando las dos columnas se vuelven demasiado pequeñas para mostrar el contenido 
+   apropiadamente. Dependiendo de las características del contenido, podemos optar por 
+   ocultarlo, reemplazarlo con un contenido diferente o reorganizar las columnas. En 
+   este caso, decidimos convertir el diseño de dos columnas en un diseño de una columna 
+   moviendo el elemento <aside> debajo del elemento <section>. Existen varias maneras de 
+   lograr este objetivo. Ponemos quitar la propiedad flex y que los elementos se comporten
+   como block, entonces uno estará debajo de otro forzosamente. Otra opción, la que 
+   implementamos a continuación es cambiar la dirección en que se organizan los elementos
+   dentro de la caja flexibla, en lugar de que se organicen horizontalmente, de izquierda
+   a derecha (valor por defecto), hacemos que ahora se ainien en columna de arriba a abajo
+   además hacemos que ambos elementos puedan cubrir el 100% del ancho de la ventana */
+@media (max-width: 720px) {
+    main > div {
+        flex-direction: column;
+    }
+    #articulosprincipales {
+        max-width: 100%;
+        margin-right: 0;
+    }
+    #infoadicional {
+        max-width: 100%;
+        padding: 5%;
+        margin-top: 20px;
+    }
+}
+
+/* Modificamos los elementos para forzar al navegador a mostrarlos uno por línea y centrar 
+   sus contenidos. La primer regla centran el contenido del elemento cabeceralogo para que 
+   se muestre mejor en pantallas pequeñas. A continuación, definimos el tamaño del elemento 
+   menuprincipal (el contenedor del menú) para que tenga el máximo ancho posible y una 
+   altura determinada por su  contenido (height: 100%). También declaramos los elementos li 
+   dentro del elemento menuprincipal como elementos Block para mostrar las opciones del menú 
+   una por línea. Finalmente, los anchos de las tres secciones dentro del pie de página 
+   también se extienden y se cambia la orientación del flex a columnas para mostrar una por 
+   línea. */
+@media (max-width: 480px) {
+    #cabeceralogo > div {
+        text-align: center;
+        padding-top: 5px;
+    }
+    #menuprincipal {
+        width: 100%;
+        height: 100%;
+        padding: 0%;
+    }
+    #menuprincipal li {
+        display: block;
+        margin-right: 0px;
+        margin-left: 5%;
+        text-align: left;
+    }
+    #listamenu li > ul {
+        width: 75%;
+    }
+    #listamenu li > ul > li {
+        width: 100%;
+    }
+    footer > div {
+        flex-direction: column;
+    }
+    .seccionpie {
+        width: 94%;
+        text-align: center;
+    }
+}
+
+/* Si la página va a la impresora, eliminamos el menú de navegación y hacemos las imágenes
+   más pequeñas*/
+@media print {
+    #menuprincipal {
+        display: none;
+    }
+    .imgs img {
+        width: 15%;
+    }
+}
