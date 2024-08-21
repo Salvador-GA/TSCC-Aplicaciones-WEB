@@ -1,0 +1,1 @@
+Ejemplo de funciones y objetos en JavaScript

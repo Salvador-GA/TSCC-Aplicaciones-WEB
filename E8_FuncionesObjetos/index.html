@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="EEjemplo 8 de TSCC UAM-I">
+    <meta name="keywords" content="HTML, CSS, JavaScript, WEB, Dinámico, Ejemplo, UAM-I">
+    <meta name="author" content="Salvador Gonzalez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/enprogreso.ico" type="image/x-icon">
+    <link rel="stylesheet" href="recursos/styles.css">
+    <script src="recursos/scripts.js"></script>
+    <title>Ejemplo de Objetos y Funciones en JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>Ejemplo de JavaScript con Objetos y Funciones</h1>
+    </header>
+
+    <main>
+        <section id="seccionForm">
+            <h2>Formulario de usuario</h2>
+            <form id="usuariosForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required><br>
+
+                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fechaNacimiento" required><br>
+
+                <label for="email">email:</label>
+                <input type="email" id="email" required><br>
+
+                <button type="button" onclick="crearUsuario()">Crear usuario</button>
+            </form>
+        </section>
+
+        <section id="listaUsuariosSection">
+            <h2>Lista de usuarios</h2>
+            <ul id="listaUsuarios"></ul>
+        </section>
+    </main>
+</body>
+</html>
