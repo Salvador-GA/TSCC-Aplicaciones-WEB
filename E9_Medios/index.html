@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="EEjemplo 9 de TSCC UAM-I">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Ejemplo, API, Medios, UAM-I">
+    <meta name="author" content="Salvador Gonzalez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/enprogreso.ico" type="image/x-icon">
+    <link rel="stylesheet" href="recursos/styles.css">
+    <script src="recursos/scripts.js"></script>
+    <title>Ejemplo de la API Medios</title>
+</head>
+
+<body>
+    <section id="reproductor">
+        <video id="medio" width="720" height="400" poster="imagenes/matrix-4280571_1280.jpg">
+            <source src="videos/100493-656497720_tiny.mp4">
+            <track id="subEs" src="videos/subtitulosEs.vtt" srclang="es" default>
+            <track id="subEn" src="videos/subtitulosEn.vtt" srclang="en">
+        </video>
+        <nav>
+            <div id="botones">
+                <input type="button" id="reproducir" value=">">
+                <input type="button" id="silenciar" value="Silencio">
+            </div>
+            <div id="tiempo">
+                <p id="tiempoAct">0.0</p>
+            </div>
+            <div id="barra">
+                <div id="progreso"></div>
+            </div>
+            <div id="control">
+                <input type="range" id="volumen" min="0" max="1" step="0.1" value="0.6">
+            </div>
+            <div id="subs">
+                <label for="seleccionSubtitulos">Subtítulos:</label>
+                <select id="seleccionSubtitulos">
+                    <option value="none">Ninguno</option>
+                    <option value="subEs">Español</option>
+                    <option value="subEn">Inglés</option>
+                </select>
+            </div>
+            <div class="recuperar"></div>
+        </nav>
+    </section>
+</body>
+
+</html>
