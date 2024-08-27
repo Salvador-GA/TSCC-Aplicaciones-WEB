@@ -1,0 +1,82 @@
+/* Reset básico para eliminar márgenes y padding predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Estilo para la sección que contiene el video */
+section {
+    margin-bottom: 20px;
+}
+
+video {
+    width: 640px;
+    height: 360px;
+    border: 5px solid #534885;
+    border-radius: 10px;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para la sección de datos */
+#cajadatos {
+    width: 640px;
+    background-color: #eaeaea;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Estilo para los botones de control en el nav */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+input[type="button"] {
+    width: 50px; 
+    height: 50px; 
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+    background-size: cover; /* Asegura que la imagen cubra todo el botón */
+    background-position: center; /* Centra la imagen dentro del botón */
+}
+
+#apagar {
+    background-image: url("../imagenes/boton-de-encendido.png");
+}
+
+#pausareanudar {
+    background-image: url("../imagenes/pausa.png");
+}
+
+/* Estilo para cuando el botón es presionado */
+input[type="button"]:active {
+    transform: scale(0.90); /* Hace que el botón se encoja ligeramente al hacer clic */
+}
+
+/* Pequeña responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    video, #cajadatos {
+        width: 100%;
+        height: auto;
+    }
+}
