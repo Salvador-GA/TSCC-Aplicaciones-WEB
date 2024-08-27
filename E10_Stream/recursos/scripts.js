@@ -76,12 +76,12 @@ function exito(transmision) {
     // Configurar el botón de apagado
     // Note que para hacer un llamado a función con parámetro se debe envolver la función
     // en una función anonima, para que efectivamente se ejecute solo al hacer click, de otro 
-    // modo si escribieramos apagar.addEventListener("click", deteneriniciartransmision(transmision));
+    // modo si escribieramos apagar.addEventListener("click", detenertransmision(transmision));
     // La función se ejecutaría inmediatamente y al listener se le pasaría el valor devuelto
     // por la función
     apagar = document.getElementById("apagar");
     apagar.addEventListener("click", function() {
-        deteneriniciartransmision(transmision);
+        detenertransmision(transmision);
     });
 
     // Configurar el botón de pausa/reanudación
@@ -105,7 +105,7 @@ function mostrarerror(error) {
  *
  * @param {MediaStream} transmision - La transmisión de video y audio a detener.
  */
-function deteneriniciartransmision(transmision) {
+function detenertransmision(transmision) {
     // Detener la pista de video
     var pistasvideo = transmision.getVideoTracks();
     if (pistasvideo.length > 0) {
