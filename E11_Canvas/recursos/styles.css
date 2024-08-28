@@ -1,0 +1,14 @@
+h1 {
+    margin-left: 5px;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cajacanvas {
+    border-style: dotted;
+    border-width: 1px;
+    border-radius: 10px;
+}
