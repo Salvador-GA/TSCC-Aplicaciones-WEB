@@ -1,0 +1,1 @@
+Ejemplos que configura la escena 3D con un fondo, una cámara en perspectiva, y un renderizador. También crea un cubo geométrico con un material básico, lo añade a la escena, y posiciona la cámara para visualizar el cubo correctamente. Finalmente, agrega un listener para el movimiento del mouse que realiza una animación llamando a la función mover.

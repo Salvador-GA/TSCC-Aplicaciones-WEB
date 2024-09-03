@@ -1,0 +1,1 @@
+Ejemplos que configura la escena 3D con un fondo, una cámara en perspectiva, y un renderizador que se ajusta al tamaño de la ventana. También crea un cubo geométrico con un material básico, lo añade a la escena, y posiciona la cámara para visualizar el cubo correctamente. Finalmente, inicia la animación llamando a la función animar.

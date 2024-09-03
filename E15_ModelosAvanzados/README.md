@@ -1,0 +1,1 @@
+Ejemplos que configura la escena 3D y establece el fondo, la cámara en perspectiva, y el renderizador. También añade una luz direccional a la escena para iluminar el modelo, y utiliza `ColladaLoader` para cargar un modelo 3D en formato COLLADA (.dae). Además, se añaden event listeners para mover la nave con las flechas del teclado y para rotarla con el movimiento del mouse.

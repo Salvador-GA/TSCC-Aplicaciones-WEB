@@ -1,0 +1,1 @@
+Ejemplos que configura la escena 3D con un fondo, una cámara en perspectiva, y un renderizador. También crea un cubo geométrico con un material Phong, lo añade a la escena, y posiciona la cámara para visualizar el cubo correctamente. Finalmente, agrega listeners para el movimiento del mouse, el clic y la rueda para interactuar con la cámara.
