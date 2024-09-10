@@ -1,0 +1,1 @@
+Ejemplo para almacenar información con IndexedDB cookies

@@ -1,0 +1,92 @@
+/* Cajas de formularios */
+.formularios {
+    float: left;
+    padding: 20px;
+    border: 1px solid #7b00ac;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* Caja para mostrar los datos */
+#cajadatos {
+    float: left;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #7b00ac;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los campos de entrada */
+#clave, #texto {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilo para cada div dentro de #cajadatos */
+#cajadatos > div {
+    padding: 10px;
+    border-bottom: 1px solid #7b00ac;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Botones más visibles y estilizados */
+input[type="button"] {
+    background-color: #7b00ac;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover para los botones */
+input[type="button"]:hover {
+    background-color: #9d00d9;
+}
+
+/* Estilos para el elemento botón */
+button {
+    background-color: #7b00ac;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efecto hover para el botón */
+button:hover {
+    background-color: #9d00d9;
+    transform: scale(1.05); /* Añade un pequeño efecto de agrandamiento */
+}
+
+/* Efecto de enfoque */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(123, 0, 172, 0.5); /* Añade una sombra al enfocarse */
+}
+
+/* Estilo para cuando la ventana es pequeña */
+@media (max-width: 768px) {
+    .formularios, #cajadatos {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}
