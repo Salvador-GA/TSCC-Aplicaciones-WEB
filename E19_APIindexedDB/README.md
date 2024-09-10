@@ -1,1 +1,1 @@
-Ejemplo para almacenar información con IndexedDB cookies
+Ejemplo para almacenar información con IndexedDB
