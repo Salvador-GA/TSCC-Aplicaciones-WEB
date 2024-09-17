@@ -1,0 +1,129 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Estilo para el formulario */
+#cajaformulario {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e1e1e1;
+    border: 2px solid #7b00ac;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    color: #7b00ac;
+    border: 2px solid #7b00ac;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+    background-color: #f3f3f3;
+    border-color: #4b0082;
+}
+
+/* Caja de datos */
+#cajadatos {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #7b00ac;
+    border-radius: 10px;
+    
+    /* Evitar desbordamiento de contenido */
+    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
+    word-wrap: break-word; /* Ajusta las palabras largas para que no se salgan del contenedor */
+    white-space: pre-wrap; /* Mantiene saltos de línea y espacios pero permite ajuste de palabras */
+}
+
+#cajadatos p {
+    font-size: 16px;
+    color: #333;
+    overflow-wrap: break-word; /* Ajuste de texto para palabras largas */
+}
+
+/* Estilo para las listas generadas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+li:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Estilo para los botones */
+button, input[type="submit"] {
+    background-color: #7b00ac;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #590075;
+}
+
+/* Estilo para la caja de drag and drop */
+#dragDropArea {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 2px dashed #7b00ac;
+    border-radius: 10px;
+    color: #555;
+}
+
+/* Cambiar el estilo del área de arrastre cuando un archivo está encima */
+#dragDropArea.dragover {
+    background-color: #e0e0e0;
+    border-color: #4a00e0;
+    color: #ff89ef83;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #cajaformulario, #cajadatos {
+        max-width: 100%;
+    }
+}

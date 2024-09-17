@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usuarios>
+    <usuario>
+        <id>1</id>
+        <nombre>Juan</nombre>
+        <apellido_paterno>García</apellido_paterno>
+        <apellido_materno>Martínez</apellido_materno>
+        <fecha_nacimiento>1990-04-23</fecha_nacimiento>
+    </usuario>
+    <usuario>
+        <id>2</id>
+        <nombre>María</nombre>
+        <apellido_paterno>Hernández</apellido_paterno>
+        <apellido_materno>Lopez</apellido_materno>
+        <fecha_nacimiento>1985-07-15</fecha_nacimiento>
+    </usuario>
+    <usuario>
+        <id>3</id>
+        <nombre>Pedro</nombre>
+        <apellido_paterno>Ramírez</apellido_paterno>
+        <apellido_materno>Gómez</apellido_materno>
+        <fecha_nacimiento>1992-01-05</fecha_nacimiento>
+    </usuario>
+</usuarios>
+
