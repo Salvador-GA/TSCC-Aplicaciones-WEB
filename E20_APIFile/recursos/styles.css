@@ -117,7 +117,7 @@ button:hover, input[type="submit"]:hover {
 /* Cambiar el estilo del área de arrastre cuando un archivo está encima */
 #dragDropArea.dragover {
     background-color: #e0e0e0;
-    border-color: #4a00e0;
+    border-color: #ff89ef83;
     color: #ff89ef83;
 }
 

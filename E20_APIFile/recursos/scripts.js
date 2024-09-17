@@ -49,6 +49,8 @@ function procesarFileDrop(evento) {
     var archivos = evento.dataTransfer.files;
     var archivo = archivos[0];
     procesarArchivo(archivo);
+    var dropArea = document.getElementById("dragDropArea");
+    dropArea.classList.remove("dragover");
 }
 
 /**
@@ -82,7 +84,9 @@ function procesarArchivo(archivo) {
     var tipo = archivo.type;
 
     // Identifica el tipo MIME del archivo
-    if (tipo.startsWith("text/")) {
+    if (tipo === "text/xml" || tipo === "application/xml") {
+        cargarXML(archivo);
+    } else if (tipo.startsWith("text/")) {
         leerTexto(archivo);
     } else if (tipo.startsWith("image/")) {
         cargarImagen(archivo);
@@ -90,8 +94,6 @@ function procesarArchivo(archivo) {
         cargarVideo(archivo);
     } else if (tipo === "application/pdf") {
         cargarPDF(archivo);
-    } else if (tipo === "text/xml" || tipo === "application/xml") {
-        cargarXML(archivo);
     } else {
         cajadatos.innerHTML = "Tipo de archivo no soportado";
     }
@@ -163,6 +165,17 @@ function cargarPDF(archivo) {
         cajadatos.appendChild(object);
     });
     lector.readAsDataURL(archivo);
+}
+
+/**
+ * @brief Carga un archivo XML.
+ * 
+ * @param {File} archivo Archivo XML seleccionado por el usuario.
+ */
+function cargarXML(archivo) {
+    var lector = new FileReader();
+    lector.addEventListener("load", mostrarXML);
+    lector.readAsText(archivo);
 }
 
 /**
