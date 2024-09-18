@@ -1,0 +1,18 @@
+// instalar node.js en ubuntu
+sudo apt install nodejs
+sudo apt install npm
+
+// Crear una carpeta para el servidor de webSocket
+mkdir websocket-server
+cd websocket-server
+
+// Inicializar el proyecto de Node.js
+npm init -y
+
+// Instalar el paquete ws
+npm install ws
+
+// En la carpeta websocket-server, crea un archivo llamado server.js y colocar el código del servidor
+
+// Ejecutar el servidor WebSocket
+node server.js

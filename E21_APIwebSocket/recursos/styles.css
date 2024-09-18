@@ -1,0 +1,74 @@
+/* Estilos básicos para el chatbot */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#chatbot {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.275);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#mensajes {
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+}
+
+#mensajes p {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.usuario {
+    background-color: #d1e7dd;
+    text-align: right;
+}
+
+.chatbot {
+    background-color: #f8d7da;
+    text-align: left;
+}
+
+#formulario-chat {
+    display: flex;
+}
+
+#input-pregunta {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #7b00ac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #590075;
+}
