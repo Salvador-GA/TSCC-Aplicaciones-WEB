@@ -1,0 +1,86 @@
+/* Aplica el box-sizing para incluir padding y borde en el tamaño total de los elementos. 
+   Elimina márgenes y rellenos por defecto en todos los elementos */
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo base para el cuerpo de la página: define la fuente, el color de fondo, 
+   el color del texto y centra el contenido */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1DB954; /* Color verde típico de Spotify */
+    color: white;
+    text-align: center; /* Centra el texto dentro del body */
+}
+
+/* Estilos para el encabezado de la página, agrega margen superior e inferior */
+header {
+    margin: 20px 0;
+}
+
+/* Estilos para el contenedor del campo de búsqueda */
+#search {
+    margin: 20px;
+}
+
+/* Estilo del campo de entrada del buscador, añade relleno interno, 
+   ancho fijo y elimina borde. También redondea las esquinas */
+#search-input {
+    padding: 10px;
+    width: 300px; /* Ancho del campo de búsqueda */
+    border: none; /* Elimina el borde por defecto */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-right: 10px; /* Espacio entre el campo de entrada y el botón de búsqueda */
+}
+
+/* Estilo del botón de búsqueda, define el color, relleno, bordes redondeados 
+   y el cursor cambia a pointer cuando el usuario pasa el ratón */
+#search-button {
+    padding: 10px 20px;
+    background-color: #fff; /* Botón blanco con texto verde */
+    color: #1DB954;
+    border: none; /* Elimina el borde por defecto */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es un botón */
+}
+
+/* Efecto hover para el botón de búsqueda, cambia el color de fondo cuando el ratón 
+   se coloca sobre el botón */
+#search-button:hover {
+    background-color: #ddd; /* Color gris claro en hover */
+}
+
+/* Estilo para el contenedor de resultados */
+#results {
+    margin-top: 30px; /* Añade espacio superior para separar los resultados del contenido superior */
+}
+
+/* Contenedor de las pistas encontradas, usa flexbox para organizar las pistas en filas 
+   y permite que se ajusten automáticamente al ancho disponible */
+#tracks-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las pistas se distribuyan en múltiples filas si es necesario */
+    justify-content: center; /* Centra las pistas dentro del contenedor */
+    margin-top: 20px;
+}
+
+/* Estilo de cada tarjeta de pista, define el color de fondo, márgenes, relleno y 
+   bordes redondeados */
+.track {
+    background-color: #333; /* Fondo oscuro para cada tarjeta de pista */
+    margin: 10px; /* Espacio entre las tarjetas */
+    padding: 20px; /* Espacio interno dentro de cada tarjeta */
+    width: 250px; /* Ancho fijo para cada tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el contenido dentro de la tarjeta */
+}
+
+/* Estilo de las imágenes de las pistas, asegura que las imágenes no excedan el tamaño 
+   del contenedor y redondea las esquinas */
+.track img {
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+}
+

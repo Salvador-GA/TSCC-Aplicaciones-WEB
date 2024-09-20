@@ -1,0 +1,27 @@
+// instalar node.js en ubuntu
+sudo apt install nodejs
+sudo apt install npm
+
+// Crear una carpeta para el servidor de webSocket
+mkdir spotifyAPI-server
+cd spotifyAPI-server
+
+// Inicializar el proyecto de Node.js
+npm init -y
+
+// Instalar los paquetes necesarios para este proyecto
+npm install express node-fetch btoa cors
+
+// En la carpeta spotifyAPI-server, crea un archivo llamado server.js y colocar el código del servidor
+
+// Asegurarse que el contenido del archivo package.json tenga como main y name la siguieten información
+{
+  "name": "spotifyapi-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  ...
+
+// Ejecutar el servidor WebSocket
+node server.js
